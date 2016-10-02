@@ -1,0 +1,89 @@
+{
+    "type": "document",
+    "children": [
+        {
+            "type": "title",
+            "contents": "Accessibility of Things"
+        },
+        {
+            "type": "heading",
+            "contents": "Content",
+            "children": [
+                {
+                    "type": "paragraph",
+                    "contents": "The content must be perceivable and navigable by everyone to include those who use assistive technologies (AT) such as a screen reader or magnifier.  While the interfaces may differ, the underlying principles carry across all devices!"
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "contents": "Standards and Laws",
+            "children": [
+                {
+                    "type": "unordered-list",
+                    "contents": "There are many standards such as:",
+                    "children": [
+                        {
+                            "type": "unordered-row",
+                            "contents": "WCAG - Web Content Accessibility Guidelines"
+                        },
+                        {
+                            "type": "unordered-row",
+                            "contents": "Section 508 - Amendment to the Rehabilitation Act of 1973"
+                        }
+                    ]
+                },
+                {
+                    "type": "ordered-list",
+                    "contents": "There are specific laws which mandate Texas agencies adhere to accessibility guidelines:",
+                    "children": [
+                        {
+                            "type": "ordered-row",
+                            "contents": "Texas Administrative Code, Title 1, Chapters 206 and 213 (1 TAC 206/213)"
+                        },
+                        {
+                            "type": "ordered-row",
+                            "contents": "Section 508 - Amendment to the Rehabilitation Act of 1973 (29 U.S.C. § 794 (d))"
+                        },
+                        {
+                            "type": "ordered-row",
+                            "contents": "Texas Government Code 2054, Subchapter M"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "contents": "Resources",
+            "children": [
+                {
+                    "type": "unordered-list",
+                    "contents": "There are many standards such as:",
+                    "children": [
+                        {
+                            "type": "unordered-row",
+                            "contents": "DIR Electronic and Information Resources (EIR) Accessibility Policy"
+                        },
+                        {
+                            "type": "unordered-row",
+                            "contents": "GSA Section508.gov"
+                        },
+                        {
+                            "type": "unordered-row",
+                            "contents": "Section508.gov"
+                        },
+                        {
+                            "type": "unordered-row",
+                            "contents": "Policy-Driven Adoption for Accessibility (PDAA)"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "contents": "Presenters"
+        }
+    ]
+}
