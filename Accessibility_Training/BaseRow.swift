@@ -18,23 +18,27 @@ class BaseRow {
     static let UnorderedRowTypeName = "unordered-row"
     static let ParagraphTypeName = "paragraph"
     static let TitleTypeName = "title"
+    static let PresentersTypeName = "presenters"
 
     static let TypeKeyName = "type"
     static let ChildrenKeyName = "children"
     static let ContentsKeyName = "contents"
-    
+    static let CustomIdKeyName = "customId"
+
     var type = RowType.Unknown
     var level = 0
     var childRows = [BaseRow]()
     var reuseId: String = "unknown"
     var visibleRow = false
-    
+    var customId: String = ""
+
     func parseJson(parsedJson: [String:Any], currLevel: Int) { // -> [String:Any]? {
 
         let rowTypeName = parsedJson[BaseRow.TypeKeyName] as! String
         type = ATDocument.parseRowType(rowTypeName: rowTypeName)
         level = currLevel
-        
+        customId = parsedJson[BaseRow.CustomIdKeyName] as! String
+
         if let children = parsedJson[BaseRow.ChildrenKeyName] as? [[String:Any]] {
             
             if children.count > 0 {

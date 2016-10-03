@@ -24,6 +24,13 @@ class ATDocumentViewController: UIViewController {
         if trainingContent.title.characters.count > 0 {
             self.title = trainingContent.title
         }
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(voiceOverStatusChanged),
+            name: NSNotification.Name(rawValue: UIAccessibilityVoiceOverStatusChanged),
+            object: nil)
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,6 +47,17 @@ class ATDocumentViewController: UIViewController {
 //            destination.selectedArtist = artists[indexPath.row]
 //        }
     }
+    
+    deinit {
+        
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    func voiceOverStatusChanged() {
+        
+        let _ = UIAccessibilityIsVoiceOverRunning()
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -58,6 +76,7 @@ extension ATDocumentViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let row = trainingContent.rowListBySection[indexPath.section]![indexPath.row]
+        // NSLog("reuseId: \(row.reuseId)")
         let cell = tableView.dequeueReusableCell(withIdentifier: row.reuseId, for: indexPath) as! BaseTableViewCell
         
         cell.configure(rowModel: row)

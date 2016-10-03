@@ -12,7 +12,7 @@ import TTTAttributedLabel
 class ContentsRowCell: BaseTableViewCell {
     
     let UrlTagConst = "UrlTag"
-    let layoutManagerSetup: Bool = false
+    var layoutManagerSetup: Bool = false
     var myLayoutManager: NSLayoutManager? = nil
     var myTextContainer: NSTextContainer? = nil
     var myTextStorage: NSTextStorage? = nil
@@ -148,6 +148,10 @@ class ContentsRowCell: BaseTableViewCell {
     
     func setupLayoutManger(attribString: NSAttributedString) {
         
+        if layoutManagerSetup {
+            return
+        }
+        
         // Create instances of NSLayoutManager, NSTextContainer and NSTextStorage
         myLayoutManager = NSLayoutManager()
         myTextContainer = NSTextContainer(size: textContentsLabel.frame.size)
@@ -164,9 +168,30 @@ class ContentsRowCell: BaseTableViewCell {
         myTextContainer!.lineFragmentPadding = 0.0;
         myTextContainer!.lineBreakMode = textContentsLabel.lineBreakMode;
         myTextContainer!.maximumNumberOfLines = textContentsLabel.numberOfLines;
+        
+        layoutManagerSetup = true
+    }
+    
+    func handleTapWithVoiceOver() {
+        
+        let contentsRow = contentRowModel()
+        for content in contentsRow.textContentsArray {
+            
+            if content.type == ContentsType.URL {
+                
+                let urlContent = content as! UrlContents
+                UIApplication.shared.openURL(urlContent.link!)
+            }
+        }
     }
     
     func handleTapOnLabel(recognizer: UIGestureRecognizer) {
+        
+        let voRunning = UIAccessibilityIsVoiceOverRunning()
+        if voRunning {
+            
+            self.handleTapWithVoiceOver()
+        }
         
         setupLayoutManger(attribString: textContentsLabel.attributedText!)
         

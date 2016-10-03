@@ -17,6 +17,7 @@ enum RowType {
     case UnorderedRow
     case Spacer
     case Title
+    case Presenters
     case Unknown
 }
 
@@ -87,6 +88,8 @@ class ATDocument {
                 }
                 
                 doc.headings.append(contentsOf: walkHeadingNodes(rowNode: rowNode))
+                
+                doc.title = title
             }
             
             doc.title = title
@@ -176,6 +179,8 @@ class ATDocument {
             inferredRowType = RowType.Paragraph
         case BaseRow.TitleTypeName:
             inferredRowType = RowType.Title
+        case BaseRow.PresentersTypeName:
+            inferredRowType = RowType.Presenters
         default:
             inferredRowType = RowType.Unknown
         }
@@ -202,6 +207,8 @@ class ATDocument {
             row = UnorderedList()
         case RowType.UnorderedRow:
             row = UnorderedRow()
+        case RowType.Presenters:
+            row = PresentersRow()
         default:
             row = BaseRow()
         }

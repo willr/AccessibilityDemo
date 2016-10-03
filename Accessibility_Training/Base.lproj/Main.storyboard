@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -190,6 +191,42 @@
                                             <outlet property="textContentsLabel" destination="RAY-c6-gUO" id="cAu-fw-SKa"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="presenters" rowHeight="88" id="20U-82-4Zw" userLabel="Presenters Cell" customClass="PresentersCell" customModule="Accessibility_Training" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="400" width="343" height="88"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="20U-82-4Zw" id="3g1-b2-CMX">
+                                            <frame key="frameInset" width="343" height="88"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DIR-logo" translatesAutoresizingMaskIntoConstraints="NO" id="iYf-O0-gzW">
+                                                    <accessibility key="accessibilityConfiguration" label="Department of Information Resources">
+                                                        <bool key="isElement" value="YES"/>
+                                                    </accessibility>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="iYf-O0-gzW" secondAttribute="height" multiplier="59:44" id="iQP-fa-o1H"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MicroAssist-logo" translatesAutoresizingMaskIntoConstraints="NO" id="8wR-kr-6ld">
+                                                    <accessibility key="accessibilityConfiguration" label="MicroAssist">
+                                                        <bool key="isElement" value="YES"/>
+                                                    </accessibility>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="8wR-kr-6ld" secondAttribute="height" multiplier="217:88" id="hZQ-we-xtk"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="8wR-kr-6ld" secondAttribute="trailing" id="3te-uq-kwI"/>
+                                                <constraint firstItem="8wR-kr-6ld" firstAttribute="leading" secondItem="iYf-O0-gzW" secondAttribute="trailing" constant="8" id="7Jc-Tg-NPr"/>
+                                                <constraint firstItem="8wR-kr-6ld" firstAttribute="top" secondItem="3g1-b2-CMX" secondAttribute="top" id="BOg-CV-ezd"/>
+                                                <constraint firstItem="iYf-O0-gzW" firstAttribute="top" secondItem="3g1-b2-CMX" secondAttribute="top" id="Di0-2P-4tQ"/>
+                                                <constraint firstItem="8wR-kr-6ld" firstAttribute="leading" secondItem="iYf-O0-gzW" secondAttribute="trailing" constant="8" id="MCO-Ft-riz"/>
+                                                <constraint firstItem="iYf-O0-gzW" firstAttribute="leading" secondItem="3g1-b2-CMX" secondAttribute="leading" id="QcQ-rd-Nm2"/>
+                                                <constraint firstAttribute="bottom" secondItem="8wR-kr-6ld" secondAttribute="bottom" id="qup-eY-yJi"/>
+                                                <constraint firstAttribute="bottom" secondItem="iYf-O0-gzW" secondAttribute="bottom" id="y0a-lV-dKL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="RbU-hK-eJD"/>
@@ -214,4 +251,8 @@
             <point key="canvasLocation" x="-527.20000000000005" y="134.48275862068968"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DIR-logo" width="171" height="87"/>
+        <image name="MicroAssist-logo" width="436" height="91"/>
+    </resources>
 </document>

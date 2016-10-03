@@ -3,6 +3,7 @@
     "children": [
         {
             "type": "title",
+            "customId": "title",
             "contents": [
                 {
                     "type": "string",
@@ -12,6 +13,7 @@
         },
         {
             "type": "heading",
+            "customId": "heading-content",
             "contents": [
                 {
                     "type": "string",
@@ -21,6 +23,7 @@
             "children": [
                 {
                     "type": "paragraph",
+                    "customId": "paragraph-content",
                     "contents": [
                         {
                             "type": "string",
@@ -32,6 +35,7 @@
         },
         {
             "type": "heading",
+            "customId": "heading-standards-laws",
             "contents": [
                 {
                     "type": "string",
@@ -41,6 +45,7 @@
             "children": [
                 {
                     "type": "unordered-list",
+                    "customId": "unordered-list-standards",
                     "contents": [
                         {
                             "type": "string",
@@ -50,6 +55,7 @@
                     "children": [
                         {
                             "type": "unordered-row",
+                            "customId": "unordered-row-wcag-link",
                             "contents": [
                                 {
                                     "type": "url",
@@ -64,6 +70,7 @@
                         },
                         {
                             "type": "unordered-row",
+                            "customId": "unordered-row-section-508-link",
                             "contents": [
                                 {
                                     "type": "url",
@@ -80,15 +87,18 @@
                 },
                 {
                     "type": "ordered-list",
+                    "customId": "ordered-list-laws",
                     "contents": [
                         {
                             "type": "string",
+                            "customId": "ordered-list-laws",
                             "text": "There are specific laws which mandate Texas agencies adhere to accessibility guidelines:"
                         }
                     ],
                     "children": [
                         {
                             "type": "ordered-row",
+                            "customId": "ordered-row-206-213-links",
                             "contents": [
                                 {
                                     "type": "string",
@@ -116,6 +126,7 @@
                         },
                         {
                             "type": "ordered-row",
+                            "customId": "ordered-row-section-508-link",
                             "contents": [
                                 {
                                     "type": "string",
@@ -134,6 +145,7 @@
                         },
                         {
                             "type": "ordered-row",
+                            "customId": "ordered-row-texas-code-link",
                             "contents": [
                                 {
                                     "type": "url",
@@ -148,6 +160,7 @@
         },
         {
             "type": "heading",
+            "customId": "heading-resources",
             "contents": [
                 {
                     "type": "string",
@@ -157,6 +170,7 @@
             "children": [
                 {
                     "type": "unordered-list",
+                    "customId": "unordered-list-standards",
                     "contents": [
                         {
                             "type": "string",
@@ -166,6 +180,7 @@
                     "children": [
                         {
                             "type": "unordered-row",
+                            "customId": "unordered-row-dir-link",
                             "contents": [
                                 {
                                     "type": "string",
@@ -180,6 +195,7 @@
                         },
                         {
                             "type": "unordered-row",
+                            "customId": "unordered-row-gsa-508-link",
                             "contents": [
                                 {
                                     "type": "url",
@@ -190,6 +206,7 @@
                         },
                         {
                             "type": "unordered-row",
+                            "customId": "unordered-row-508-gov-link",
                             "contents": [
                                 {
                                     "type": "url",
@@ -200,6 +217,7 @@
                         },
                         {
                             "type": "unordered-row",
+                            "customId": "unordered-row-pdaa-link",
                             "contents": [
                                 {
                                     "type": "url",
@@ -214,10 +232,17 @@
         },
         {
             "type": "heading",
+            "customId": "heading-resources",
             "contents": [
                 {
                     "type": "string",
                     "text": "Presenters"
+                }
+            ],
+            "children": [
+                {
+                    "type": "presenters",
+                    "customId": "presenter-images"
                 }
             ]
         }
