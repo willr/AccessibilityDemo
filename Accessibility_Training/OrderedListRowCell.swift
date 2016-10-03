@@ -23,13 +23,14 @@ class OrderedListRowCell: ContentsRowCell {
                 spacer.append(" ")
             }
             let level = orderedRow.position
-            let content = orderedRow.textContents
-            
-            textContentsLabel.text = "\(spacer) \(level)) \(content)"
+            // let content = orderedRow.textContents
+            // textContentsLabel.text = "\(spacer) \(level)) \(content)"
+            let attribString = NSMutableAttributedString(string:"\(spacer) \(level) ")
+            attribString.append(textContentsLabel.attributedText!)
+            textContentsLabel.attributedText = attribString
             
             if orderedRow.lastListRow {
-                textContentsLabel.accessibilityLabel = textContentsLabel.text! + ". List end."
-                let _  = 0
+                self.accessibilityValue = "List End"
             }
         }
     }

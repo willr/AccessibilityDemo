@@ -15,7 +15,7 @@ class UnorderedList: ContentList {
             return BaseRow.UnorderedListTypeName
         }
         set {
-            self.reuseId = BaseRow.UnorderedListTypeName
+            super.reuseId = BaseRow.UnorderedListTypeName
         }
     }
     

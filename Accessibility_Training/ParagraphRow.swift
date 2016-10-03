@@ -15,7 +15,7 @@ class ParagraghRow: ContentRow {
             return BaseRow.ParagraphTypeName
         }
         set {
-            self.reuseId = BaseRow.ParagraphTypeName
+            super.reuseId = BaseRow.ParagraphTypeName
         }
     }
     

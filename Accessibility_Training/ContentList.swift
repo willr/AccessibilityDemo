@@ -8,17 +8,13 @@
 
 import Foundation
 
-class ContentList: BaseRow {
-    
-    var textContents: String = ""
+class ContentList: ContentRow {
     
     override func parseJson(parsedJson: [String:Any], currLevel: Int) {
         
         super.parseJson(parsedJson: parsedJson, currLevel: currLevel)
         visibleRow = true
-        
-        textContents = parsedJson[BaseRow.ContentsKeyName] as! String
-        
+
         if childRows.count > 0 {
             
             let lastRow = childRows[childRows.count - 1] as! ContentListRow

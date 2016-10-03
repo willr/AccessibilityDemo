@@ -3,51 +3,144 @@
     "children": [
         {
             "type": "title",
-            "contents": "Accessibility of Things"
-        },
-        {
-            "type": "heading",
-            "contents": "Content",
-            "children": [
+            "contents": [
                 {
-                    "type": "paragraph",
-                    "contents": "The content must be perceivable and navigable by everyone to include those who use assistive technologies (AT) such as a screen reader or magnifier.  While the interfaces may differ, the underlying principles carry across all devices!"
+                    "type": "string",
+                    "text": "Accessibility of Things"
                 }
             ]
         },
         {
             "type": "heading",
-            "contents": "Standards and Laws",
+            "contents": [
+                {
+                    "type": "string",
+                    "text": "Content"
+                }
+            ],
+            "children": [
+                {
+                    "type": "paragraph",
+                    "contents": [
+                        {
+                            "type": "string",
+                            "text": "The content must be perceivable and navigable by everyone to include those who use assistive technologies (AT) such as a screen reader or magnifier.  While the interfaces may differ, the underlying principles carry across all devices!"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "contents": [
+                {
+                    "type": "string",
+                    "text": "Standards and Laws"
+                }
+            ],
             "children": [
                 {
                     "type": "unordered-list",
-                    "contents": "There are many standards such as:",
+                    "contents": [
+                        {
+                            "type": "string",
+                            "text": "There are many standards such as:"
+                        }
+                    ],
                     "children": [
                         {
                             "type": "unordered-row",
-                            "contents": "WCAG - Web Content Accessibility Guidelines"
+                            "contents": [
+                                {
+                                    "type": "url",
+                                    "text": "WCAG",
+                                    "link": "https://www.w3.org/TR/WCAG20/"
+                                },
+                                {
+                                    "type": "string",
+                                    "text": " - Web Content Accessibility Guidelines"
+                                }
+                            ]
                         },
                         {
                             "type": "unordered-row",
-                            "contents": "Section 508 - Amendment to the Rehabilitation Act of 1973"
+                            "contents": [
+                                {
+                                    "type": "url",
+                                    "text": "Section 508",
+                                    "link": "https://www.w3.org/TR/WCAG20/"
+                                },
+                                {
+                                    "type": "string",
+                                    "text": " - Amendment to the Rehabilitation Act of 1973"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "type": "ordered-list",
-                    "contents": "There are specific laws which mandate Texas agencies adhere to accessibility guidelines:",
+                    "contents": [
+                        {
+                            "type": "string",
+                            "text": "There are specific laws which mandate Texas agencies adhere to accessibility guidelines:"
+                        }
+                    ],
                     "children": [
                         {
                             "type": "ordered-row",
-                            "contents": "Texas Administrative Code, Title 1, Chapters 206 and 213 (1 TAC 206/213)"
+                            "contents": [
+                                {
+                                    "type": "string",
+                                    "text": "Texas Administrative Code, Title 1, Chapters 206 and 213 (1 TAC "
+                                },
+                                {
+                                    "type": "url",
+                                    "text": "206",
+                                    "link": "http://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=4&ti=1&pt=10&ch=206"
+                                },
+                                {
+                                    "type": "string",
+                                    "text": "/"
+                                },
+                                {
+                                    "type": "url",
+                                    "text": "213",
+                                    "link": "http://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=4&ti=1&pt=10&ch=213"
+                                },
+                                {
+                                    "type": "string",
+                                    "text": ")"
+                                }
+                            ]
                         },
                         {
                             "type": "ordered-row",
-                            "contents": "Section 508 - Amendment to the Rehabilitation Act of 1973 (29 U.S.C. § 794 (d))"
+                            "contents": [
+                                {
+                                    "type": "string",
+                                    "text": "Section 508 - Amendment to the Rehabilitation Act of 1973 ("
+                                },
+                                {
+                                    "type": "url",
+                                    "text": "29 U.S.C. § 794 (d)",
+                                    "link": "https://www.gpo.gov/fdsys/pkg/USCODE-2011-title29/html/USCODE-2011-title29-chap16-subchapV-sec794d.htm"
+                                },
+                                {
+                                    "type": "string",
+                                    "text": ")"
+                                }
+                            ]
                         },
                         {
                             "type": "ordered-row",
-                            "contents": "Texas Government Code 2054, Subchapter M"
+                            "contents": [
+                                {
+                                    "type": "url",
+                                    "text": "Texas Government Code 2054, Subchapter M",
+                                    "link": "http://www.statutes.legis.state.tx.us/Docs/GV/htm/GV.2054.htm#2054.451"
+                                }
+                            ]
                         }
                     ]
                 }
@@ -55,27 +148,65 @@
         },
         {
             "type": "heading",
-            "contents": "Resources",
+            "contents": [
+                {
+                    "type": "string",
+                    "text": "Resources"
+                }
+            ],
             "children": [
                 {
                     "type": "unordered-list",
-                    "contents": "There are many standards such as:",
+                    "contents": [
+                        {
+                            "type": "string",
+                            "text": "There are many standards such as:"
+                        }
+                    ],
                     "children": [
                         {
                             "type": "unordered-row",
-                            "contents": "DIR Electronic and Information Resources (EIR) Accessibility Policy"
+                            "contents": [
+                                {
+                                    "type": "string",
+                                    "text": "DIR "
+                                },
+                                {
+                                    "type": "url",
+                                    "text": "DIR Electronic and Information Resources (EIR) Accessibility Policy",
+                                    "link": "http://dir.texas.gov/View-About-DIR/Pages/Content.aspx?id=19"
+                                }
+                            ]
                         },
                         {
                             "type": "unordered-row",
-                            "contents": "GSA Section508.gov"
+                            "contents": [
+                                {
+                                    "type": "url",
+                                    "text": "GSA Section508.gov",
+                                    "link": "https://www.section508.gov/"
+                                }
+                            ]
                         },
                         {
                             "type": "unordered-row",
-                            "contents": "Section508.gov"
+                            "contents": [
+                                {
+                                    "type": "url",
+                                    "text": "Section508.gov",
+                                    "link": "https://www.section508.gov/"
+                                }
+                            ]
                         },
                         {
                             "type": "unordered-row",
-                            "contents": "Policy-Driven Adoption for Accessibility (PDAA)"
+                            "contents": [
+                                {
+                                    "type": "url",
+                                    "text": "Policy-Driven Adoption for Accessibility (PDAA)",
+                                    "link": "http://www.nascio.org/PDAA"
+                                }
+                            ]
                         }
                     ]
                 }
@@ -83,7 +214,12 @@
         },
         {
             "type": "heading",
-            "contents": "Presenters"
+            "contents": [
+                {
+                    "type": "string",
+                    "text": "Presenters"
+                }
+            ]
         }
     ]
 }

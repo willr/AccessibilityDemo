@@ -15,13 +15,12 @@ class UnorderedRow: ContentListRow {
             return BaseRow.UnorderedRowTypeName
         }
         set {
-            self.reuseId = BaseRow.UnorderedRowTypeName
+            super.reuseId = BaseRow.UnorderedRowTypeName
         }
     }
     
     override func parseJson(parsedJson: [String:Any], currLevel: Int) {
         
         super.parseJson(parsedJson: parsedJson, currLevel: currLevel)
-        // textContents = parsedJson["contents"] as! String
     }
 }

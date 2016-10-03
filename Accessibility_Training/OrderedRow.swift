@@ -17,7 +17,7 @@ class OrderedRow: ContentListRow {
             return BaseRow.OrderedRowTypeName
         }
         set {
-            self.reuseId = BaseRow.OrderedRowTypeName
+            super.reuseId = BaseRow.OrderedRowTypeName
         }
     }
     

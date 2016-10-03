@@ -8,17 +8,12 @@
 
 import UIKit
 
-class ContentsListCell: BaseTableViewCell {
-    
-    @IBOutlet var textContentsLabel: UILabel!
+class ContentsListCell: ContentsRowCell {
     
     override func configure(rowModel: BaseRow) {
         
         super.configure(rowModel: rowModel)
         
-        if let contentList = rowModel as? ContentList {
-            textContentsLabel.text = contentList.textContents
-        }
     }
     
     func contentListModel() -> ContentList? {

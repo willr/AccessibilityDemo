@@ -23,13 +23,14 @@ class UnorderedListRowCell: ContentsRowCell {
                 spacer.append(" ")
             }
             let level = "•"
-            let content = unorderedRow.textContents
-            
-            textContentsLabel.text = "\(spacer) \(level) \(content)"
+            // let content = unorderedRow // .toAttribString()
+            // textContentsLabel.text = "\(spacer) \(level) \(content)"
+            let attribString = NSMutableAttributedString(string:"\(spacer) \(level) ")
+            attribString.append(textContentsLabel.attributedText!)
+            textContentsLabel.attributedText = attribString
             
             if unorderedRow.lastListRow {
-                textContentsLabel.accessibilityLabel = textContentsLabel.text! + ". List end."
-                let _  = 0
+                self.accessibilityValue = "List End"
             }
         }
     }

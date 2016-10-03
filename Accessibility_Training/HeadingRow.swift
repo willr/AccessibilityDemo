@@ -15,7 +15,7 @@ class HeadingRow: ContentRow {
             return BaseRow.HeaderTypeName
         }
         set {
-            self.reuseId = BaseRow.HeaderTypeName
+            super.reuseId = BaseRow.HeaderTypeName
         }
     }
     

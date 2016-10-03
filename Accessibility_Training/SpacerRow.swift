@@ -15,7 +15,7 @@ class SpacerRow: BaseRow {
             return BaseRow.SpacerTypeName
         }
         set {
-            self.reuseId = BaseRow.SpacerTypeName
+            super.reuseId = BaseRow.SpacerTypeName
         }
     }
     

@@ -66,7 +66,8 @@ extension ATDocumentViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return trainingContent.headings[section].textContents
+        let headingArray = trainingContent.headings[section]
+        return headingArray.toAttribString().string
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

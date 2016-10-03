@@ -20,6 +20,12 @@ enum RowType {
     case Unknown
 }
 
+enum ContentsType {
+    case String
+    case URL
+    case Unknown
+}
+
 class ATDocument {
     
     var rowNodes = [BaseRow]()
@@ -50,7 +56,15 @@ class ATDocument {
                 
                 let rowJsonType = ATDocument.parseRowType(parsedJson: rowJson)
                 if (rowJsonType == RowType.Title) {
-                    title = rowJson[BaseRow.ContentsKeyName] as! String
+                    let contentsArray = rowJson[BaseRow.ContentsKeyName] as! [[String: Any]]
+                    let attributedTitle = NSMutableAttributedString(string: "")
+                    for contents in contentsArray {
+                        
+                        let tempStringContents = StringContents()
+                        tempStringContents.parseJson(parsedJson: contents)
+                        attributedTitle.append(tempStringContents.toAttribString())
+                    }
+                    title = attributedTitle.string
                     continue
                 }
                 let rowNode = ATDocument.newRowNode(rowType: rowJsonType)
@@ -193,5 +207,37 @@ class ATDocument {
         }
 
         return row
+    }
+    
+    static func parseContentsType(contentsTypeName: String) -> ContentsType {
+        
+        var inferredType: ContentsType
+        
+        switch contentsTypeName {
+        case BaseContents.StringContentsTypeName:
+            inferredType = ContentsType.String
+        case BaseContents.UrlContentsTypeName:
+            inferredType = ContentsType.URL
+        default:
+            inferredType = ContentsType.Unknown
+        }
+        
+        return inferredType
+    }
+    
+    static func newContentsType(contentsType: ContentsType) -> BaseContents {
+        
+        let contents: BaseContents
+        
+        switch contentsType {
+        case ContentsType.String:
+            contents = StringContents()
+        case ContentsType.URL:
+            contents = UrlContents()
+        default:
+            contents = BaseContents()
+        }
+        
+        return contents
     }
 }
