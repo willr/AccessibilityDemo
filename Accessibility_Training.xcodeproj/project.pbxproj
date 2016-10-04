@@ -363,7 +363,7 @@
 				TargetAttributes = {
 					BEDE47B81DA0B510009B165C = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = E5VP7Z6X7Y;
+						DevelopmentTeam = VBQW24EU3N;
 						ProvisioningStyle = Automatic;
 					};
 					BEDE47CF1DA0B510009B165C = {
@@ -739,11 +739,11 @@
 			baseConfigurationReference = 31A827A393E7C54F194821EC /* Pods-Accessibility_Training.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = E5VP7Z6X7Y;
+				DEVELOPMENT_TEAM = VBQW24EU3N;
 				INFOPLIST_FILE = Accessibility_Training/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.bblox.accessibility.Accessibility-Training";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.bblox.accessibility.Accessibility-Demo1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -754,11 +754,11 @@
 			baseConfigurationReference = 708BE0274C767ECF9A88F56F /* Pods-Accessibility_Training.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = E5VP7Z6X7Y;
+				DEVELOPMENT_TEAM = VBQW24EU3N;
 				INFOPLIST_FILE = Accessibility_Training/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.bblox.accessibility.Accessibility-Training";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.bblox.accessibility.Accessibility-Demo1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
